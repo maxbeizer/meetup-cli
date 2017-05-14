@@ -5,5 +5,19 @@
   "main": "index.js",
   "repository": "https://github.com/maxbeizer/meetup-cli",
   "author": "Max Beizer",
-  "license": "MIT"
+  "license": "MIT",
+  "engines": {
+    "node": ">=6.9.1"
+  },
+  "scripts": {
+    "build": "npm install -g"
+  },
+  "bin": {
+    "meetup": "index.js"
+  },
+  "dependencies": {
+    "commander": "^2.9.0",
+    "got": "^6.7.1",
+    "netrc-parser": "^2.0.2"
+  }
 }
