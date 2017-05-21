@@ -2,7 +2,7 @@
   "name": "meetup-cli",
   "version": "0.1.0",
   "description": "Interact with the Meetup.com API via the CLI",
-  "main": "index.js",
+  "main": "meetup.js",
   "repository": "https://github.com/maxbeizer/meetup-cli",
   "author": "Max Beizer",
   "license": "MIT",
@@ -14,7 +14,7 @@
     "test": "mocha && standard --verbose"
   },
   "bin": {
-    "meetup": "index.js"
+    "meetup": "meetup.js"
   },
   "dependencies": {
     "commander": "^2.9.0",
