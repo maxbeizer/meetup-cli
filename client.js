@@ -6,9 +6,9 @@ const password = netrc.machines['api.meetup.com'].password
 
 const fetchResults = (_args) => {
   return got('https://api.meetup.com/self/calendar',
-      {
-        'query': `key=${password}`
-      }
+    {
+      'query': `key=${password}`
+    }
     )
     .then(res => JSON.parse(res.body))
 }
