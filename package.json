@@ -11,7 +11,7 @@
   },
   "scripts": {
     "build": "npm install -g",
-    "test": "mocha && standard --verbose"
+    "test": "jest && standard --verbose"
   },
   "bin": {
     "meetup": "meetup.js"
@@ -22,9 +22,7 @@
     "netrc-parser": "^2.0.2"
   },
   "devDependencies": {
-    "chai": "^3.5.0",
-    "mocha": "^3.4.1",
-    "nock": "^9.0.13",
+    "jest": "^20.0.3",
     "standard": "^10.0.2"
   }
 }
