@@ -145,4 +145,4 @@ const fetchResults = () => {
   })
 }
 
-module.exports = { fetchResults }
+module.exports = {fetchResults}
