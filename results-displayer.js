@@ -1,3 +1,5 @@
+const chalk = require('chalk')
+
 const displayResult = (result, options = {}) => {
   const { name, group, link } = result
   const groupName = group.name
@@ -7,10 +9,11 @@ const displayResult = (result, options = {}) => {
     return info.join(' ')
   }
 
-  console.log('-------------')
-  console.log(name)
-  console.log(groupName)
-  console.log(link)
+  console.log(chalk.bgWhite('-------------'))
+  console.log('')
+  console.log(chalk.magenta(name))
+  console.log(chalk.blue(groupName))
+  console.log(chalk.yellow.underline(link))
   console.log('')
 
   return result
