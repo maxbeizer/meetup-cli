@@ -1,15 +1,23 @@
-const displayResult = (result) => {
+const displayResult = (result, options = {}) => {
+  const { name, group, link } = result
+  const groupName = group.name
+  const info = [name, groupName, link]
+
+  if (process.env.NODE_ENV === 'test' && !options.unstub) {
+    return info.join(' ')
+  }
+
   console.log('-------------')
-  console.log(result.name)
-  console.log(result.group.name)
-  console.log(result.link)
+  console.log(name)
+  console.log(groupName)
+  console.log(link)
   console.log('')
+
+  return result
 }
 
-const displayResults = (results) => {
-  results
-    .slice(0, 9)
-    .map(result => displayResult(result))
-}
+const displayResults = results => results.map(displayResult)
 
-module.exports = {displayResults}
+const limitResults = (results, sliceTo = 9) => results.slice(0, sliceTo)
+
+module.exports = {limitResults, displayResults, displayResult}

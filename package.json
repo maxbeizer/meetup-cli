@@ -11,7 +11,7 @@
   },
   "scripts": {
     "build": "npm install -g",
-    "test": "jest && standard --verbose"
+    "test": "NODE_ENV=test jest && standard --verbose"
   },
   "bin": {
     "meetup": "meetup.js"
